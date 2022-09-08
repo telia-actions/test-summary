@@ -281,11 +281,13 @@ export async function parseJunit(data: string): Promise<TestResult> {
 }
 
 export async function parseTapFile(filename: string): Promise<TestResult> {
-    const readfile = util.promisify(fs.readFile)
+  console.log(`Parsing Tap file '${filename}'`)
+  const readfile = util.promisify(fs.readFile)
     return await parseTap(await readfile(filename, "utf8"))
 }
 
 export async function parseJunitFile(filename: string): Promise<TestResult> {
+    console.log(`Parsing Junit file '${filename}'`)
     const readfile = util.promisify(fs.readFile)
     return await parseJunit(await readfile(filename, "utf8"))
 }
