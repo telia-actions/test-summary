@@ -450,7 +450,13 @@ function parseJunitXml(xml) {
                 }
                 else if (testcase.failure) {
                     status = TestStatus.Fail;
-                    details = testcase.failure[0]._;
+                    if (testcase.failure[0].$) {
+                        const failure = testcase.failure[0].$;
+                        details = `${failure.type}: ${failure.message}`;
+                    }
+                    else {
+                        details = testcase.failure[0]._;
+                    }
                     counts.failed++;
                 }
                 else {
