@@ -204,7 +204,7 @@ async function parseJunitXml(xml: any): Promise<TestResult> {
     if (xml.testsuites) {
         testsuites = xml.testsuites.testsuite
     } else if (xml.testsuite) {
-        testsuites = Array.isArray(xml.testsuite.testsuite) ? xml.testsuite.testsuite : [ xml.testsuite.testsuite ]
+        testsuites = 'testcase' in xml.testsuite ? [ xml.testsuite ] : xml.testsuite.testsuite
     } else {
         throw new Error("expected top-level testsuites or testsuite node")
     }
