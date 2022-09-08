@@ -487,6 +487,7 @@ function parseJunit(data) {
 exports.parseJunit = parseJunit;
 function parseTapFile(filename) {
     return __awaiter(this, void 0, void 0, function* () {
+        console.log(`Parsing Tap file '${filename}'`);
         const readfile = util.promisify(fs.readFile);
         return yield parseTap(yield readfile(filename, "utf8"));
     });
@@ -494,6 +495,7 @@ function parseTapFile(filename) {
 exports.parseTapFile = parseTapFile;
 function parseJunitFile(filename) {
     return __awaiter(this, void 0, void 0, function* () {
+        console.log(`Parsing Junit file '${filename}'`);
         const readfile = util.promisify(fs.readFile);
         return yield parseJunit(yield readfile(filename, "utf8"));
     });
