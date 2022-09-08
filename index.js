@@ -418,7 +418,7 @@ function parseJunitXml(xml) {
             testsuites = xml.testsuites.testsuite;
         }
         else if (xml.testsuite) {
-            testsuites = Array.isArray(xml.testsuite) ? xml.testsuite : [xml.testsuite];
+            testsuites = 'testcase' in xml.testsuite ? [xml.testsuite] : xml.testsuite.testsuite;
         }
         else {
             throw new Error("expected top-level testsuites or testsuite node");
