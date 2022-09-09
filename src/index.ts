@@ -11,7 +11,7 @@ const failIconUrl = 'http://svg.test-summary.com/icon/fail.svg?s=12'
 const skipIconUrl = 'http://svg.test-summary.com/icon/skip.svg?s=12'
 const noneIconUrl = 'http://svg.test-summary.com/icon/none.svg?s=12'
 
-const footer = `This test report was produced by the <a href="https://github.com/test-summary/action">test-summary action</a>.&nbsp; Made with ❤️ in Cambridge.`
+const footer = `This test report was produced by the <a href="https://github.com/telia-actions/test-summary">test-summary action</a>.`
 
 async function run(): Promise<void> {
   try {
