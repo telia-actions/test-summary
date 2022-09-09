@@ -176,12 +176,12 @@ function dashboardResults(result: TestResult, show: number) {
                 table += `<img src="${skipIconUrl}" alt="">&nbsp; `
             }
 
-            table += testcase.name
-
             if (testcase.description) {
-                table += ": "
                 table += testcase.description
+                table += ": "
             }
+
+            table += testcase.name
 
             if (testcase.details) {
                 table += "<br/><pre><code>"
