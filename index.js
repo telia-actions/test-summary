@@ -194,11 +194,11 @@ function dashboardResults(result, show) {
             else if (testcase.status == test_parser_1.TestStatus.Skip) {
                 table += `<img src="${skipIconUrl}" alt="">&nbsp; `;
             }
-            table += testcase.name;
             if (testcase.description) {
-                table += ": ";
                 table += testcase.description;
+                table += ": ";
             }
+            table += testcase.name;
             if (testcase.details) {
                 table += "<br/><pre><code>";
                 table += testcase.details;
