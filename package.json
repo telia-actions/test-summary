@@ -1,6 +1,6 @@
 {
   "name": "test-summary",
-  "version": "0.0.1",
+  "version": "2.1.0",
   "private": true,
   "description": "Display test results in a GitHub Actions workflow",
   "main": "bin/index.js",
@@ -29,7 +29,7 @@
   "author": "Edward Thomson",
   "license": "MIT",
   "dependencies": {
-    "@actions/core": "^1.6.0",
+    "@actions/core": "^1.10.0",
     "glob": "^7.2.0",
     "glob-promise": "^4.2.2",
     "xml2js": "^0.4.23"
